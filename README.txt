@@ -7,11 +7,20 @@
     Line 16: Added link to a favicon            (mainscreen.html)
     Line 23: Changed header to "Computer Shop"  (mainscreen.html)
 
-    Changed webpage styling                     (styles.css)
+    Line 1-13 Changed webpage styling           (styles.css)
 
     Added directory "images" and icon           (src/main/resources/static/images/computer.ico)
 
  D.
+    Line 25-30: Added nav elements as           (mainscreen.html)
+    a list of links
+
+    Line 14+ Styled nav elements and About page (styles.css)
+
+    Created AboutController Class               (AboutController.java)
+
+    Created about.html and wrote an             (about.html)
+    about section
 
  E.
 
