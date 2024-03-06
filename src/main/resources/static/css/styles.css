@@ -1,0 +1,13 @@
+body {
+    background-color: #bebebe;
+}
+#Title {
+    background-image: url('../images/circuit.jpg');
+    color: white;
+    text-align: center;
+    height: 60px;
+}
+.thead-dark{
+    background-color: darkgreen;
+    color: white;
+}
