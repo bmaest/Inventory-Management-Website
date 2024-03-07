@@ -27,6 +27,17 @@
     products to populate the repositories as examples.
 
  F.
+    Line 96-97:
+    Added a button to buy product, passes along product id          (mainscreen.html)
+
+    Created a controller class for "/purchaseproduct" which         (purchaseController)
+    decreases product inventory by 1 if it is in stock
+    and shows a confirmation page, else it shows an error
+    page
+
+    Created a view which shows a confirmation of purchase           (confirmationpurchaseproduct.html)
+
+    Created a view which shows a failed purchase                    (failedpurchaseproduct)
 
  G.
 
