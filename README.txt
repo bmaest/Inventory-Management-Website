@@ -30,7 +30,7 @@
     Line 96-97:
     Added a button to buy product, passes along product id          (mainscreen.html)
 
-    Created a controller class for "/purchaseproduct" which         (purchaseController)
+    Created a controller class for "/purchaseproduct" which         (PurchaseController)
     decreases product inventory by 1 if it is in stock
     and shows a confirmation page, else it shows an error
     page
@@ -40,6 +40,23 @@
     Created a view which shows a failed purchase                    (failedpurchaseproduct)
 
  G.
+    Line 32-35: Added min and max values                            (Part.java)
+    Line 106: Added validInv() function to check that inventory     (Part.java)
+    is between max and min.
+
+    Line 23: Added error message when inventory is not between      (inhousePartForm.html)
+    maximum and minimum
+
+    Line 42: Added condition to check validInv() and wait for       (AddInhousePartController.java)
+    correction if it returns false
+
+    Line 24: Added error message when inventory is not between      (OutSourcePartForm.html)
+        maximum and minimum
+
+    Line 43: Added condition to check validInv() and wait for       (AddOutsourcePartController.java)
+    correction if it returns false
+
+    Lin 51~97: Added min and max values to example parts            (BootStrapData.java)
 
  H.
 

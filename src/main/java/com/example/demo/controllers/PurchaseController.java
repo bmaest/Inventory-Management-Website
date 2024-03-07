@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 
-@Controller public class purchaseController {
+@Controller public class PurchaseController {
     @Autowired
     private ApplicationContext context;
 

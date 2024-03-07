@@ -39,7 +39,7 @@ public class AddInhousePartController{
     @PostMapping("/showFormAddInPart")
     public String submitForm(@Valid @ModelAttribute("inhousepart") InhousePart part, BindingResult theBindingResult, Model theModel){
         theModel.addAttribute("inhousepart",part);
-        if(theBindingResult.hasErrors()){
+        if(theBindingResult.hasErrors() || !part.validInv()){
             return "InhousePartForm";
         }
         else{

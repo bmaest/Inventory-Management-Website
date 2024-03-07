@@ -26,6 +26,7 @@ import java.util.Set;
  *
  */
 @Component
+
 public class BootStrapData implements CommandLineRunner {
 
     private final PartRepository partRepository;
@@ -47,6 +48,8 @@ public class BootStrapData implements CommandLineRunner {
             computerCase.setPrice(99.99);
             computerCase.setInv(11);
             computerCase.setPartId(1);
+            computerCase.setMin(1);
+            computerCase.setMax(100);
             partRepository.save(computerCase);
 
             OutsourcedPart graphicsCard = new OutsourcedPart();
@@ -54,6 +57,8 @@ public class BootStrapData implements CommandLineRunner {
             graphicsCard.setName("GeForce RTX 4090");
             graphicsCard.setInv(6);
             graphicsCard.setPrice(1999.99);
+            graphicsCard.setMin(1);
+            graphicsCard.setMax(100);
             outsourcedPartRepository.save(graphicsCard);
 
             OutsourcedPart CPU = new OutsourcedPart();
@@ -61,6 +66,8 @@ public class BootStrapData implements CommandLineRunner {
             CPU.setName("i9-14900K CPU");
             CPU.setInv(12);
             CPU.setPrice(549.99);
+            CPU.setMin(1);
+            CPU.setMax(100);
             outsourcedPartRepository.save(CPU);
 
             OutsourcedPart motherboard = new OutsourcedPart();
@@ -68,6 +75,8 @@ public class BootStrapData implements CommandLineRunner {
             motherboard.setName("Z790 AORUS PRO X Motherboard");
             motherboard.setInv(35);
             motherboard.setPrice(389.99);
+            motherboard.setMin(1);
+            motherboard.setMax(100);
             outsourcedPartRepository.save(motherboard);
 
             OutsourcedPart RAM = new OutsourcedPart();
@@ -75,6 +84,8 @@ public class BootStrapData implements CommandLineRunner {
             RAM.setName("2x16 DDR5 6000Mhz RAM");
             RAM.setInv(12);
             RAM.setPrice(104.99);
+            RAM.setMin(1);
+            RAM.setMax(100);
             outsourcedPartRepository.save(RAM);
 
             OutsourcedPart SSD = new OutsourcedPart();
@@ -82,6 +93,8 @@ public class BootStrapData implements CommandLineRunner {
             SSD.setName("990 EVO SSD 1TB");
             SSD.setInv(6);
             SSD.setPrice(89.99);
+            SSD.setMin(1);
+            SSD.setMax(100);
             outsourcedPartRepository.save(SSD);
 
             Product product1= new Product("Case + SSD", 224.99, 2);
