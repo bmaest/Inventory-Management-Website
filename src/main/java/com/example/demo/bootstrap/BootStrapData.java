@@ -1,8 +1,10 @@
 package com.example.demo.bootstrap;
 
+import com.example.demo.domain.InhousePart;
 import com.example.demo.domain.OutsourcedPart;
 import com.example.demo.domain.Part;
 import com.example.demo.domain.Product;
+import com.example.demo.repositories.InhousePartRepository;
 import com.example.demo.repositories.OutsourcedPartRepository;
 import com.example.demo.repositories.PartRepository;
 import com.example.demo.repositories.ProductRepository;
@@ -15,6 +17,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 /**
  *
@@ -38,39 +41,69 @@ public class BootStrapData implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+        if (outsourcedPartRepository.count() == 0 && partRepository.count() == 0 && productRepository.count() == 0) {
+            InhousePart computerCase = new InhousePart();
+            computerCase.setName("Computer Case");
+            computerCase.setPrice(99.99);
+            computerCase.setInv(11);
+            computerCase.setPartId(1);
+            partRepository.save(computerCase);
 
-       /*
-        OutsourcedPart o= new OutsourcedPart();
-        o.setCompanyName("Western Governors University");
-        o.setName("out test");
-        o.setInv(5);
-        o.setPrice(20.0);
-        o.setId(100L);
-        outsourcedPartRepository.save(o);
-        OutsourcedPart thePart=null;
-        List<OutsourcedPart> outsourcedParts=(List<OutsourcedPart>) outsourcedPartRepository.findAll();
-        for(OutsourcedPart part:outsourcedParts){
-            if(part.getName().equals("out test"))thePart=part;
+            OutsourcedPart graphicsCard = new OutsourcedPart();
+            graphicsCard.setCompanyName("NVIDIA");
+            graphicsCard.setName("GeForce RTX 4090");
+            graphicsCard.setInv(6);
+            graphicsCard.setPrice(1999.99);
+            outsourcedPartRepository.save(graphicsCard);
+
+            OutsourcedPart CPU = new OutsourcedPart();
+            CPU.setCompanyName("Intel");
+            CPU.setName("i9-14900K CPU");
+            CPU.setInv(12);
+            CPU.setPrice(549.99);
+            outsourcedPartRepository.save(CPU);
+
+            OutsourcedPart motherboard = new OutsourcedPart();
+            motherboard.setCompanyName("GIGABYTE");
+            motherboard.setName("Z790 AORUS PRO X Motherboard");
+            motherboard.setInv(35);
+            motherboard.setPrice(389.99);
+            outsourcedPartRepository.save(motherboard);
+
+            OutsourcedPart RAM = new OutsourcedPart();
+            RAM.setCompanyName("Crucial");
+            RAM.setName("2x16 DDR5 6000Mhz RAM");
+            RAM.setInv(12);
+            RAM.setPrice(104.99);
+            outsourcedPartRepository.save(RAM);
+
+            OutsourcedPart SSD = new OutsourcedPart();
+            SSD.setCompanyName("Samsung");
+            SSD.setName("990 EVO SSD 1TB");
+            SSD.setInv(6);
+            SSD.setPrice(89.99);
+            outsourcedPartRepository.save(SSD);
+
+            Product product1= new Product("Case + SSD", 224.99, 2);
+            productRepository.save(product1);
+
+            Product product2= new Product("Motherboard + CPU", 999.99, 5);
+            productRepository.save(product2);
+
+            Product product3= new Product("CPU + RAM", 659.99, 2);
+            productRepository.save(product3);
+
+            Product product4= new Product("Motherboard + CPU + RAM", 1049.99, 4);
+            productRepository.save(product4);
+
+            Product product5= new Product("Full PC", 2499.99, 1);
+            productRepository.save(product5);
         }
-
-        System.out.println(thePart.getCompanyName());
-        */
-        List<OutsourcedPart> outsourcedParts=(List<OutsourcedPart>) outsourcedPartRepository.findAll();
-        for(OutsourcedPart part:outsourcedParts){
-            System.out.println(part.getName()+" "+part.getCompanyName());
-        }
-
-        /*
-        Product bicycle= new Product("bicycle",100.0,15);
-        Product unicycle= new Product("unicycle",100.0,15);
-        productRepository.save(bicycle);
-        productRepository.save(unicycle);
-        */
 
         System.out.println("Started in Bootstrap");
-        System.out.println("Number of Products"+productRepository.count());
+        System.out.println("Number of Products"+ " " + productRepository.count());
         System.out.println(productRepository.findAll());
-        System.out.println("Number of Parts"+partRepository.count());
+        System.out.println("Number of Parts"+ " " + partRepository.count());
         System.out.println(partRepository.findAll());
 
     }
