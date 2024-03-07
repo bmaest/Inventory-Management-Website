@@ -71,5 +71,7 @@
     minimum upon creating part
 
  I.
+    Line 104-138: Created tests for getMin(), setMin(),             (PartTest.java)
+    getMax(), and setMax().
 
  J.
