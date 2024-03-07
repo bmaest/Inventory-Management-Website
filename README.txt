@@ -44,7 +44,7 @@
     Line 106: Added validInv() function to check that inventory     (Part.java)
     is between max and min.
 
-    Line 23: Added error message when inventory is not between      (inhousePartForm.html)
+    Line 23: Added error message when inventory is not between      (InhousePartForm.html)
     maximum and minimum
 
     Line 42: Added condition to check validInv() and wait for       (AddInhousePartController.java)
@@ -59,6 +59,16 @@
     Lin 51~97: Added min and max values to example parts            (BootStrapData.java)
 
  H.
+    Line 23-24: Created two statements, one checks if               (InhousePartForm.html)
+    inventory is below the minimum and the other if it
+    is above the maximum.
+
+    Line 24-25: Created two statements, one checks if               (OutSourcePartForm.html)
+    inventory is below the minimum and the other if it
+    is above the maximum.
+
+    Line 36: Added condition to check if inventory will go below    (EnufPartsValidator.java)
+    minimum upon creating part
 
  I.
 
