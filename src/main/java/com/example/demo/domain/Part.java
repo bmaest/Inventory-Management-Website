@@ -4,7 +4,6 @@ import com.example.demo.validators.ValidDeletePart;
 
 import javax.persistence.*;
 import javax.validation.constraints.Min;
-import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;

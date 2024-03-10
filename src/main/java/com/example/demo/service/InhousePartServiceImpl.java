@@ -1,9 +1,6 @@
 package com.example.demo.service;
-
 import com.example.demo.domain.InhousePart;
-import com.example.demo.domain.OutsourcedPart;
 import com.example.demo.repositories.InhousePartRepository;
-import com.example.demo.repositories.OutsourcedPartRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -54,11 +51,4 @@ public class InhousePartServiceImpl implements InhousePartService {
         partRepository.save(thePart);
 
     }
-
-    @Override
-    public void deleteById(int theId) {
-        Long theIdl=(long)theId;
-        partRepository.deleteById(theIdl);
-    }
-
 }

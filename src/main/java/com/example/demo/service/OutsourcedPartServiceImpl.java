@@ -52,11 +52,4 @@ public class OutsourcedPartServiceImpl implements OutsourcedPartService{
         partRepository.save(thePart);
 
     }
-
-    @Override
-    public void deleteById(int theId) {
-        Long theIdl=(long)theId;
-        partRepository.deleteById(theIdl);
-    }
-
 }

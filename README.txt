@@ -75,3 +75,5 @@
     getMax(), and setMax().
 
  J.
+    Deleted "DeletePartValidator" which had no implementations      (DeletePartValidator.java)
+    Deleted all unused imports and functions, cleaned up all code.
