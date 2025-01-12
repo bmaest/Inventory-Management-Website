@@ -5,7 +5,6 @@ This project is an Inventory Management System (IMS) designed to streamline the 
 
 ## Features
 - **Product Management**: Add, update, and remove products from the inventory.
-- **Stock Tracking**: Monitor stock levels and receive alerts when supplies are low.
 - **Order Processing**: Handle purchase orders and sales transactions.
 
 ## Technologies Used
